@@ -1,0 +1,19 @@
+{
+"sap-dev-resHeaders.json": "{\n \"Content-Security-Policy\": \"\",\n \"Content-Security-Policy-Report-Only\": \"\"\n}",
+"sapSfEnv.WORKSPACE": "Users/i342154/Projects/SF/Dev",
+"sapSfEnv.PP3": "Users/i342154/Projects/SF/Dev/au-peopleprofile/au-peopleprofile-sap.sf.peopleprofile-web/src/main/webapp/ui/peopleprofile/resources/sap/sf/peopleprofile",
+"sapSfEnv.extent": "Users/i342154/Projects/SF/Dev/au-peopleprofile/au-peopleprofile-sap.extent.uilib-web/src/main/uilib/sap/extent/uilib",
+"sapSfEnv.adminhomepage": "Users/i342154/Projects/SF/modules/au-adminhomepage/au-adminhomepage-sap.sf.adminhomepage-web/src/main/uilib/sap/sf/adminhomepage",
+"sapSfEnv.ectV12": "Users/i342154/Projects/SF/Dev/au-employeecentral/au-employeecentral-web/src/main/webapp",
+"sapSfEnv.workflows": "Users/i342154/Projects/SF/modules/au-peopleprofile/au-peopleprofile-sap.sf.workflow-web/src/main/webapp/ui/peopleprofile/resources",
+"sapSfEnv.tomcatWebRoot": "Users/i342154/Projects/SF/Dev/tomcat-sfs/webapps/ROOT",
+"sapSfEnv.chartingV12": "Users/i342154/Projects/SF/Dev/idl-charting/idl-charting-web/src/main/webapp",
+"sapSfEnv.surjShell": "Users/i342154/Projects/SF/modules/idl-surj/idl-surj-sap.sf.surj.shell-web/src/main/uilib/sap/sf/surj/shell",
+"sapSfEnv.surj": "Users/i342154/Projects/SF/modules/idl-surj",
+"sapSfEnv.ginkgo": "Users/i342154/Projects/SF/modules/au-peopleprofile/au-peopleprofile-sap.ginkgo.uilib-web/src/main/uilib/sap/ginkgo/uilib",
+"sapSfEnv.ui5Version": "1.65.10",
+"sapSfPatchPreview.WORKSPACE": "Users/i342154/Projects/SF/PatchPreview",
+"resCors.json": "origin: *\nmethods: *\nheaders: *\ncredentials: true\nmaxAge: 300000\n",
+"sapSfEnv.ectV12Common": "Users/i342154/Projects/SF/Dev/idl-ecuicommon/idl-ecuicommon-web/src/main/webapp"
+}
+
