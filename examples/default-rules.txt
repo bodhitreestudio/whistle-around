@@ -1,0 +1,77 @@
+
+#/.*10\.59\.180\.32.*/i resCors://{resCors.json}
+#/.*10\.59\.180\.32.*/i replaceStatus://200
+
+#/.*10\.58\.102\.178.*/i resCors://{resCors.json}
+#/.*10\.58\.102\.178.*/i replaceStatus://200
+
+
+#**.ondemand.com resHeaders://{sap-dev-resHeaders.json}
+
+#http://10.58.102.178:8080 http://vm-ip:8080
+
+#sf.dev http://localhost:8080
+
+# Ginkgo
+/.*\/sap\/ginkgo\/uilib\/(.*(js|xml)$)/i                              file:///${sapSfEnv.ginkgo}/$1
+/.*\/sap\/ginkgo\/(.*(js|xml)$)/i                              	file:///${sapSfEnv.ginkgo}/$1
+
+# UI5
+#/\/(ui\/sapui5\/main)_([0-9.]*)\/(.*)/i                               file:///${sapSfEnv.tomcatWebRoot}/$1_$2/$3
+#/\/(ui\/sapui5\/main)_([0-9.]*)\/(.*)/i                               file:///${sapSfEnv.tomcatWebRoot}/$1_${sapSfEnv.ui5Version}/$3
+
+# extent
+#/.*\/sap\/extent\/uilib\/library-preload.js/i                         file:///${sapSfEnv.extent}/library.js
+#/.*\/sap\/extent\/uilib\/(.*(js|xml)$)/i                              file:///${sapSfEnv.extent}/$1
+
+# UI5 workflow
+/.*(sap\/sf\/workflow\/.*)/i                                          file:///${sapSfEnv.workflows}/$1
+
+# UI5 adminhomepage
+#/.*sap\/sf\/adminhomepage\/Component-preload.js/i                     file:///${sapSfEnv.adminhomepage}/Component.js
+#/.*sap\/sf\/adminhomepage\/(.*(js|css|xml)$)/i                        file:///${sapSfEnv.adminhomepage}/$1
+
+# UI5 PP3
+#/.*\/sap\/sf\/peopleprofile\/Component-preload.js/i                   file:///${sapSfEnv.PP3}/Component.js
+#/.*\/sap\/sf\/peopleprofile\/(.*(js|xml)$)/i                          file:///${sapSfEnv.PP3}/$1
+
+# SURJ
+#/.*sap\/sf\/surj\/shell\/component\/header\/Component-preload.js/i    file:///${sapSfEnv.surjShell}/component/header/Component.js
+#/.*sap\/sf\/surj\/shell\/component\/shell\/Component-preload.js/i     file:///${sapSfEnv.surjShell}/component/shell/Component.js
+#/.*sap\/sf\/surj\/shell\/library-preload.js/i                         file:///${sapSfEnv.surjShell}/library.js
+#/.*sap\/sf\/surj\/shell\/(.*(js|xml)$)/i                              file:///${sapSfEnv.surjShell}/$1
+
+#/.*\/ajaxservice\/hrisAttachmentControllerASProxy_.*.js/i			   file:///${sapSfEnv.tomcatWebRoot}/ui/hris/js/ajaxservice/hrisAttachmentControllerASProxy_dev-snapshot.js
+
+# V12
+#/\/(ui\/juic\/(js)\/[^_]*)[_0-9a-zA-Z]*\.(.*)/i                       file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.$2
+#/\/(ui\/sfgrp\/js\/[^_]*)[_0-9a-zA-Z]*\.(.*)/i                        file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.$2
+#/\/(ui\/sfgrp\/css\/juicGlobal).*/i                                   file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.css
+
+#/\/(ui\/sfgrp\/(js|css)\/chartingOrgChartV12[^_]*).*(js|css)/i        file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.$2
+#/\/(ui\/sfgrp\/js\/EDU_Common_JSGrp).*js/i                            file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.js
+#/\/(ui\/charting\/js\/ajaxservice\/[^_]*).*/i                         file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.js
+#/(\/ui\/charting\/[^_]*)[_0-9a-zA-Z]*\.(.*)/i                         file:///${sapSfEnv.chartingV12}/$1.$2
+
+# V12 ECT absence
+#/\/(ui\/ect\/js\/absence\/[^_]*)_[0-9a-zA-Z]*\.(.*)/i                 file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.$2
+# V12 ECT Commons
+#/\/(ui\/ect\/js\/common\/[^_]*)[_0-9a-zA-Z]*\.(.*)/i                   file:///${sapSfEnv.ectV12Common}/$1.$2
+#/\/(ui\/sfgrp\/js\/ECTFormFieldsFiles01).*js/i                        file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.js
+#/\/(ui\/sfgrp\/js\/ECTFormFieldsFiles02).*js/i                        file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.js
+# V12 ECT
+#/\/(ui\/ect\/js\/[^_]*)[_0-9a-zA-Z]*\.(.*)/i                          file:///${sapSfEnv.ectV12}/$1.$2
+# V12 ECT workflow
+#/\/(ui\/sfgrp\/js\/ECTWFApprovalPage).*js/i                        	  file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.js
+/(\/ui\/ect\/js\/workflowApproval\/[^_]*)[^.]*(.*)/i                  file:///${sapSfEnv.ectV12}/$1$2
+#/(\/ui\/ect\/css\/ectWorkflowApproval\/[^_]*)[^.]*(.*)/i              file:///${sapSfEnv.ectV12}/$1$2
+#/(\/ui\/ect\/js\/manageWorkflowRequests\/[^_]*)[^.]*(.*)/i            file:///${sapSfEnv.ectV12}/$1$2
+# V12 ALL
+#/\/(ui\/.*\/(js|css)\/[^_]*)_[0-9a-zA-Z\-]*\.(.*)/i                   file:///${sapSfEnv.tomcatWebRoot}/$1_dev-snapshot.$2
+#/\/(ui\/.*\/(js|css)\/[^_]*)/i                                        file:///${sapSfEnv.tomcatWebRoot}/$1
+
+#/.*(sap\/sf\/workflow\/.*)/i redirect://http://127.0.0.1:7071/$1
+
+# QAPatch
+#/.*\/manageWorkflowRequests\/ectManageWorkflowRequests.*\.js           file:///${sapSfPatchPreview.WORKSPACE}/au-employeecentral/au-employeecentral-web/src/main/webapp/ui/ect/js/manageWorkflowRequests/ectManageWorkflowRequests.js
+
